@@ -1,0 +1,36 @@
+source ~/.cshrc
+set autolist
+#set watch=(1 any any)
+set nobeep
+set rmstar
+set time=1
+set savehist=(10000 merge)
+set histdup=prev
+alias hgrep 'history | grep "^.............\!^"'
+alias histfilehere 'set histfile="`pwd`"/history'
+complete man 'n/*/c/'
+complete which 'n/*/c/' 'n/*/a/'
+complete cd 'n/*/d/'
+complete b 'n/*/d/'
+complete vi 'n/*/f:^*.{o,a}/'
+complete mutf c@=@F:$HOME/Mail/@
+complete ssh 'p/*/`gethostlist`/'
+complete vi    'n/-t/`cut -f1 -d"	" tags | sort -u`/'
+complete vim   'n/-t/`cut -f1 -d"	" tags | sort -u`/'
+complete view  'n/-t/`cut -f1 -d"	" tags | sort -u`/'
+complete gview 'n/-t/`cut -f1 -d"	" tags | sort -u`/'
+complete gvim  'n/-t/`cut -f1 -d"	" tags | sort -u`/'
+complete git-push 'p@1@F:.git/remotes@'
+complete git-pull 'p@1@F:.git/remotes@'
+#set complete=enhance
+alias b pushd
+alias y popd
+unalias cd
+set prompt="%n@%m:%c02:%h %#"
+bindkey -v
+set savedirs
+if ( $?DIRSFILE ) then
+    set dirsfile="$DIRSFILE"
+endif
+
+alias save "dirs -S; history -S"
