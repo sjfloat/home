@@ -1,0 +1,3 @@
+[submodule ".vim/bundle/asciidoc-vim"]
+	path = .vim/bundle/asciidoc-vim
+	url = git@github.com:dagwieers/asciidoc-vim
