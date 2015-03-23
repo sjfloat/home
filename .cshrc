@@ -12,7 +12,7 @@ setenv LC_ALL C
 setenv LANG en_US.UTF-8
 
 setenv PAGER less
-setenv LESS "-iX"
+setenv LESS "-RiX"
 setenv CC /usr/bin/cc
 setenv EDITOR vi
 setenv SVN_EDITOR "gvim -f"
